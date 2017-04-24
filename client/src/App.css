@@ -1,0 +1,59 @@
+body{
+ width: 900px; 
+ margin: auto; 
+}
+
+li{
+  list-style: none;
+}
+
+.chatWindow{
+  width:50%; 
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid gray;
+}
+
+.chatForm{
+  display: flex; 
+  flex-direction: column;
+}
+
+.chatForm>input{
+  margin: auto;
+  height:40px;
+  margin-top: 20px;
+  width: 60%;
+  padding-left: 10px;
+  background: lightgray;
+  font-size: 18px;
+  border: 1px solid gray;
+}
+
+.chatForm>button{
+  width:100px;
+  height: 50px;
+  margin:auto;
+  margin-top: 30px;
+  border-radius: 3px;
+  background: blue;
+  color: white;
+  font-size: 20px;
+}
+
+.messageWindow{
+  width:100%; 
+  text-align: center;
+  margin-left: -20px;
+  margin-top: 30px;
+  font-size: 17px;
+
+ 
+}
+
+.message{
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
