@@ -11,8 +11,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
-users = [] 
-connections = []
+// connections = []
 
 
 // app.get("*", function(req, res){
@@ -28,28 +27,23 @@ connections = []
 
 
     io.on('connection', function(socket){
-    connections.push(socket)
-    console.log('Connected:')
-    console.log("%s users connected", connections.length)
+    // connections.push(socket)
+    // console.log('Connected:')
+    // console.log("%s users connected", connections.length)
 
     socket.on('addMessage', function(message){
-        io.sockets.emit('newMessage', message)
+        io.emit('addMessage', message)
     })
 
-
-
-    socket.on('addUser', function(user){
-     console.log('user', user)
-        io.emit('newUser', user)
-    })
-
-    socket.on('disconnect', function(data){
-        connections.splice(connections.indexOf(socket), 1)
-         console.log('Disconnected:')
-        console.log("%s users connected", connections.length)
-    }) 
+    // socket.on('disconnect', function(data){
+    //     connections.splice(connections.indexOf(socket), 1)
+    //      console.log('Disconnected:')
+    //     console.log("%s users connected", connections.length)
+    // }) 
 })
 
 server.listen(3001, function(){
     console.log('listening on port 3001')
 })
+
+
